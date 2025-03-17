@@ -3,6 +3,7 @@
 const amigos = [];
 
 const lista = document.getElementById('listaAmigos'); // Lista Amigos que se muestra en la pantalla
+const contenedorResultado = document.getElementById('resultado');
 
 
 function agregarAmigo(){
@@ -26,5 +27,13 @@ function actualizarListaAmigos(){
         lista.appendChild(li);
     }
 
+}
+
+function sortearAmigo(){
+    if (amigos.length > 0){
+        const amigoSorteado = amigos[Math.floor(Math.random()*amigos.length)]
+        console.log(amigoSorteado);
+        contenedorResultado.textContent = amigoSorteado;
+    }
 }
 
